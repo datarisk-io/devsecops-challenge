@@ -1,0 +1,98 @@
+#+TITLE: DevSecOps Hiring Test
+#+SUBTITLE: The test we apply for candidates for the DevSecOps team.
+#+AUTHOR: DevSecOps Team
+#+DATE: [2023-03-15 qua]
+
+* Datarisk DevSecOps Challenge
+
+** Apresentação
+
+Olá candidato/a ao time DevSecOps da Datarisk!
+
+Para melhor entender o seu *nível técnico*, nós preparamos este desafio como
+parte do nosso processo de contratação. Por isso, tenha em mente que não é
+necessário cumprir com todos os pontos mencionados, nem cumpri-los em uma ordem
+específica.
+
+O importante é entregar o que você conseguir fazer, com a devida documentação!
+
+Naturalmente, espera-se que candidatos para posições sênior consigam atender
+mais pontos que prospectos para posições júnior, todavia isso pode ser revisto
+com base na profundidade e qualidade das soluções apresentadas em itens
+específicos.
+
+** O Desafio
+
+Suponha que você é parte do time DevSecOps da Datarisk, trabalhando em uma
+demanda do time P&D (Pesquisa & Desenvolvimento), visando provisionar um
+ambiente com aplicações definidas por esse time.
+
+Essa demanda tem os seguintes requisitos:
+
+- Instanciar uma VM numa cloud provider. Recomendação: *Microsoft Azure*.
+  - Apresentar o custo estimado dessa VM, desconsiderando valores relacionados a
+    rede e armazenamento. Recomendação: *Azure Calculator*.
+- Criar a configuração dessa VM usando uma ferramenta de IaC (Infrastructure as
+  Code). Recomendação: *Terraform*.
+  - Criar um job de CI (Continuous Integration) para aplicar a configuração da
+    ferramenta de provisionamento. Recomendação: *GitHub Actions*.
+  - Criar um job de CI que utiliza alguma ferramenta automatizada de estimativa
+    de custos. Recomendação: *Infracost*.
+- Fazer a configuração do [[https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/wordpress/][Wordpress]] nessa VM, usando containers
+  apenas. Recomendação: *Docker* e *docker-compose*.
+  - Dica: você pode usar um software de virtualização local no lugar da VM na
+    cloud para testar essa configuração o que zera os custos com serviços da
+    nuvem. Exemplo: *Vagrant* + *VirtualBox*.
+- Fazer a instalação de uma ferramenta de monitoramento na VM, expondo
+  informações a respeito dos "[[https://sre.google/sre-book/monitoring-distributed-systems/][4 Golden Signals]]". Recomendação: *Prometheus* +
+  *Grafana*.
+- Automatizar o setup do projeto na VM após esta ter sido
+  provisionada. Recomendação: *Ansible*.
+  - Criar um job de CI para automatizar esse processo. Recomendação: *GitHub
+    Actions*.
+- Criar um job de CI para fazer o scan de vulnerabilidades (não é necessária a
+  resolução das vulnerabilidades) nesse repositório. Recomendação: *Trivy*,
+  *tfsec*.
+- Criar outros jobs de CI conforme achar conveniente. Eles serão considerados
+  posteriormente.
+- Adicionar uma ferramenta de proxy-reverso e associar um sub-domínio ao
+  Wordpress instanciado na VM. Recomendação: *NGINX* + *Azure DNS*.
+  - Configurar o certificado SSL/TLS para expor a aplicação usando
+    HTTPS. Recomendação: *Certbot*.
+- Adicionar um Dockerfile à aplicação disponibilizada na pasta projeto para
+  containerizar o mesmo. Note que foi utilizada a linguagem F# (.NET) para
+  escrever a aplicação, que é baseada na [[https://safe-stack.github.io/docs/quickstart/][SAFE stack]].
+  - Usar um manifesto com múltiplos estágios ([[https://docs.docker.com/build/building/multi-stage/][multi-stage builds]]), onde no
+    primeiro estágio fazemos a compilação do projeto e no estágio seguinte
+    copiamos o resultado para ser executado, tendo uma imagem mais enxuta ao
+    final.
+  - Criar um job de CI para enviar a imagem gerada para um Docker
+    Registry. Recomendação: *GitHub Container Registry*.
+  - Criar os manifestos YAML para hospedar a aplicação usando Kubernetes. Nesse
+    ponto os testes podem ser realizados apenas localmente, porém devem ser
+    apresentados os arquivos YAML criados. Recomendação: *Minikube*.
+- *Adicionar um README ao projeto detalhando o processo e justificando as
+  decisões tomadas*. Recomendação: *Markdown*.
+
++ Todos os refinamentos adicionados nos tópicos mencionados anteriormente, e
+  demais ideias que possam melhorar o projeto serão considerados na avaliação da
+  solução.
+
+** Requisitos
+
+Segue abaixo uma lista não-exaustiva de requisitos para completar o desafio:
+
++ Um computador com internet.
++ Uma conta (gratuita) na Microsoft Azure, ou AWS.
+
+A entrega deste desafio é o código, que deve ser disponibilizado num repositório
+do GitHub. Você deve nos enviar a URL para esse repositório para que possamos
+verificar a solução.
+
+Não se esqueça de adicionar instruções de como testar a sua solução. Estas devem
+estar descritas no README do projeto.
+
+** Perguntas?
+
+Caso tenha alguma dúvida, entre em contato conosco através do e-mail:
+~tu-hiring-process@datarisk.io~.

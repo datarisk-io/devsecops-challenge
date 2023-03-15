@@ -92,6 +92,14 @@ verificar a solução.
 Não se esqueça de adicionar instruções de como testar a sua solução. Estas devem
 estar descritas no README do projeto.
 
+** Solução
+
+Para resolver esse desafio você deve fazer um fork desse repositório para sua
+conta pessoal e armazenar o código da solução neste repositório.
+
+Em seguida, você deve compartilhar o link da resolução com nosso time através do
+e-mail ~tu-hiring-process@datarisk.io~.
+
 ** Perguntas?
 
 Caso tenha alguma dúvida, entre em contato conosco através do e-mail:

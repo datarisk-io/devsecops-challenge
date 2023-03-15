@@ -61,7 +61,7 @@ Essa demanda tem os seguintes requisitos:
     HTTPS. Recomendação: *Certbot*.
 - Adicionar um Dockerfile à aplicação disponibilizada na pasta ~projeto-fsharp/~
   para containerizar o mesmo. Note que foi utilizada a linguagem F# (.NET) para
-  escrever a aplicação, que é baseada na [[https://safe-stack.github.io/docs/quickstart/][SAFE stack]].
+  escrever a aplicação.
   - Usar um manifesto com múltiplos estágios ([[https://docs.docker.com/build/building/multi-stage/][multi-stage builds]]), onde no
     primeiro estágio fazemos a compilação do projeto e no estágio seguinte
     copiamos o resultado para ser executado, tendo uma imagem mais enxuta ao

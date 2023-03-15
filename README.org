@@ -95,4 +95,4 @@ estar descritas no README do projeto.
 ** Perguntas?
 
 Caso tenha alguma dúvida, entre em contato conosco através do e-mail:
-~tu-hiring-process@datarisk.io~. <- Create
+~tu-hiring-process@datarisk.io~.

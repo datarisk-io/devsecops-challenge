@@ -14,7 +14,7 @@ parte do nosso processo de contratação. Por isso, tenha em mente que não é
 necessário cumprir com todos os pontos mencionados, nem cumpri-los em uma ordem
 específica.
 
-O importante é entregar o que você conseguir fazer, com a devida documentação!
+O importante é entregar o que você conseguir fazer, com a devida *documentação*!
 
 Naturalmente, espera-se que candidatos para posições sênior consigam atender
 mais pontos que prospectos para posições júnior, todavia isso pode ser revisto
@@ -23,11 +23,10 @@ específicos.
 
 ** O Desafio
 
-Suponha que você é parte do time DevSecOps da Datarisk, trabalhando em uma
-demanda do time P&D (Pesquisa & Desenvolvimento), visando provisionar um
-ambiente com aplicações definidas por esse time.
-
-Essa demanda tem os seguintes requisitos:
+Segue abaixo uma lista de desafios abrangendo várias áreas de responsabilidade
+do time DevSecOps. Nossa sugestão é tentar seguir cada item na ordem
+apresentada, porém você está livre para atuar nos pontos que quiser e tiver mais
+familiaridade.
 
 - Instanciar uma VM numa cloud provider. Recomendação: *Microsoft Azure*.
   - Apresentar o custo estimado dessa VM, desconsiderando valores relacionados a
@@ -41,7 +40,7 @@ Essa demanda tem os seguintes requisitos:
 - Fazer a configuração do [[https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/wordpress/][Wordpress]] nessa VM, usando containers
   apenas. Recomendação: *Docker* e *docker-compose*.
   - Dica: você pode usar um software de virtualização local no lugar da VM na
-    cloud para testar essa configuração o que zera os custos com serviços da
+    cloud para testar essa configuração, o que zera os custos com serviços da
     nuvem. Exemplo: *Vagrant* + *VirtualBox*.
 - Fazer a instalação de uma ferramenta de monitoramento na VM, expondo
   informações a respeito dos "[[https://sre.google/sre-book/monitoring-distributed-systems/][4 Golden Signals]]". Recomendação: *Prometheus* +
@@ -50,15 +49,15 @@ Essa demanda tem os seguintes requisitos:
   provisionada. Recomendação: *Ansible*.
   - Criar um job de CI para automatizar esse processo. Recomendação: *GitHub
     Actions*.
+- Adicionar uma ferramenta de proxy-reverso e associar um sub-domínio ao
+  Wordpress instanciado na VM. Recomendação: *NGINX* + *Azure DNS*.
+  - Configurar o certificado SSL/TLS para expor a aplicação usando
+    HTTPS. Recomendação: *Certbot*.
 - Criar um job de CI para fazer o scan de vulnerabilidades (não é necessária a
   resolução das vulnerabilidades) nesse repositório. Recomendação: *Trivy*,
   *tfsec*.
 - Criar outros jobs de CI conforme achar conveniente. Eles serão considerados
   posteriormente.
-- Adicionar uma ferramenta de proxy-reverso e associar um sub-domínio ao
-  Wordpress instanciado na VM. Recomendação: *NGINX* + *Azure DNS*.
-  - Configurar o certificado SSL/TLS para expor a aplicação usando
-    HTTPS. Recomendação: *Certbot*.
 - Adicionar um Dockerfile à aplicação disponibilizada na pasta ~projeto-fsharp/~
   para containerizar o mesmo. Note que foi utilizada a linguagem F# (.NET) para
   escrever a aplicação.
@@ -86,14 +85,14 @@ Essa demanda tem os seguintes requisitos:
 Segue abaixo uma lista não-exaustiva de requisitos para completar o desafio:
 
 + Um computador com internet.
-+ Uma conta (gratuita) na Microsoft Azure, ou AWS.
++ Uma conta (gratuita) na Azure, ou AWS.
 
-A entrega deste desafio é o código, que deve ser disponibilizado num repositório
-do GitHub. Você deve nos enviar a URL para esse repositório para que possamos
-verificar a solução.
+A entrega deste desafio é o código com as soluções, que deve ser disponibilizado
+num repositório do GitHub. Você deve nos enviar a URL para esse repositório para
+que possamos verificar a solução.
 
 Não se esqueça de adicionar instruções de como testar a sua solução. Estas devem
-estar descritas no README do projeto.
+estar descritas no *README* do projeto.
 
 ** Solução
 

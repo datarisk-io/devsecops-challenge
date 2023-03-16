@@ -17,7 +17,7 @@ Como dito anteriormente, este projeto foi criado utilizando a linguagem F#, que
 Para executar o projeto localmente, é necessário que você tenha o seguinte SDK
 instalado:
 
-* .NET SDK 6.x
+* .NET SDK 6.0.202
 
 Você pode verificar quais versões estão instaladas em seu sistema usando esse
 comando:

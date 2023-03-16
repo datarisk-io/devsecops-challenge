@@ -62,6 +62,9 @@ Essa demanda tem os seguintes requisitos:
 - Adicionar um Dockerfile à aplicação disponibilizada na pasta ~projeto-fsharp/~
   para containerizar o mesmo. Note que foi utilizada a linguagem F# (.NET) para
   escrever a aplicação.
+  - Para facilitar o entendimento do projeto, adicionamos um ~README.md~ com
+    instruções de teste e uso do mesmo localmente. Você deverá ser capaz de
+    traduzir essas instruções para a criação do Dockerfile.
   - Usar um manifesto com múltiplos estágios ([[https://docs.docker.com/build/building/multi-stage/][multi-stage builds]]), onde no
     primeiro estágio fazemos a compilação do projeto e no estágio seguinte
     copiamos o resultado para ser executado, tendo uma imagem mais enxuta ao

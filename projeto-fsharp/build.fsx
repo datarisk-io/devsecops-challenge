@@ -17,6 +17,8 @@ Target.create "Run" (fun _ -> dotnet "watch run" serverPath)
 
 Target.create "Format" (fun _ -> dotnet "fantomas . -r" "src")
 
+Target.create "Build" (fun _ -> dotnet "publish -c Release -o out" "src/Server")
+
 open Fake.Core.TargetOperators
 
 [<EntryPoint>]

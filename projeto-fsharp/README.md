@@ -49,6 +49,26 @@ dotnet fake run build.fsx -t "Run"
 Após executar este comando, espera-se que o servidor esteja escutando na porta
 **8085**.
 
+### Compilar o servidor
+
+Embora o comando anterior funcione para iniciar a aplicação, esta não é a melhor
+maneira. Visando otimizar essa parte, devemos primeiramente compilar o projeto e
+depois incluir na imagem final apenas o resultado dessa compilação.
+
+Para compilar a aplicação pode ser usado o comando:
+
+``` shell
+dotnet fake run build.fsx -t "Build"
+```
+
+O resultado estará disponível dentro da pasta *./src/Server/out*. Caso queira
+iniciar o servidor novamente, desta vez a versão compilada, basta executar:
+
+``` shell
+# Dentro da pasta src/Server/out
+./Server
+```
+
 ### Testar os endpoints
 
 Por fim, podemos testar os endpoints da aplicação diretamente utilizando

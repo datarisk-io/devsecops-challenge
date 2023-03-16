@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "fsautocomplete": {
+      "version": "0.57.0",
+      "commands": [
+        "fsautocomplete"
+      ]
+    },
+    "paket": {
+      "version": "7.0.2",
+      "commands": [
+        "paket"
+      ]
+    },
+    "fake-cli": {
+      "version": "6.0.0",
+      "commands": [
+        "fake"
+      ]
+    },
+    "fantomas-tool": {
+      "version": "4.7.1",
+      "commands": [
+        "fantomas"
+      ]
+    }
+  }
+}

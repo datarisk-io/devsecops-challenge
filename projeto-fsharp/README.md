@@ -9,8 +9,8 @@ faz parte do desafio.
 
 ## Intruções de uso
 
-Como dito anteriormente, este projeto foi criado utilizando a linguagem F#, que
-é uma linguagem de programação de vários paradigmas para a plataforma .NET.
+Como dito anteriormente, este projeto foi criado utilizando a linguagem F#,
+uma linguagem de programação multiparadigma para a plataforma .NET.
 
 ### Requisitos locais
 
